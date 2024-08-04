@@ -1,0 +1,13 @@
+.classToTheFirstElement {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, 1fr);
+    justify-self: center; /* add this one if you don't want that item to be full width */
+    text-align: center; /* Optional: center the buttons horizontally */
+    display: grid;
+  }
+.button-container {
+    text-align: center; /* Optional: center the buttons horizontally */
+    display: grid;
+
+    gap: 1rem;
+}
