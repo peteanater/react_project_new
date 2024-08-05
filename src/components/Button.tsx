@@ -1,19 +1,17 @@
 import { ReactNode } from "react";
+import { useState } from "react";
 
-interface Props {
-    children: string;
-    color?: "primary"|"secondary"| "danger";
-    onClick: () => void;
-}
+function Button({ number, appendNumber }) {
 
-const Button = ( { children, color="Primary", onClick }:Props) => {
+    const handleClick = () => {
+        appendNumber(number);
+      };
+
     return (
-        <button 
-        className={
-            'btn btn-'+ color
-        } 
-        onClick={ onClick }> {children}</button>
-    )
+        <div>
+            <button type="button" className="btn btn-primary" onClick={handleClick}>{number}</button>
+        </div>
+        );
 }
 
-export default Button
+export default Button;
